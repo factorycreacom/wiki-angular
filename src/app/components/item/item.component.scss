@@ -1,0 +1,30 @@
+.mainItem{
+    height: 80px !important;
+    margin-bottom: 15px;
+    border-radius: 14px !important;
+    -webkit-box-shadow: -1px 0px 21px -11px rgba(153,153,153,1);
+-moz-box-shadow: -1px 0px 21px -11px rgba(153,153,153,1);
+box-shadow: -1px 0px 21px -11px rgba(153,153,153,1);
+}
+.imageBox{
+   // border: 1px solid #cccccc;
+   img{
+      // width: 100%;
+       width: 120%;
+       min-height: 100%;
+   }
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    .title{
+        font-size: 14px;
+        font-weight: bold;
+        color: #1b1b1b;
+    }
+    .description{
+        font-size: 12px;
+        color: #424242;
+    }
+}
