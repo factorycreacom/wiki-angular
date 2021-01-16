@@ -1,0 +1,12 @@
+<div class="container">
+    <app-header></app-header>
+  
+    <div class="row contents">
+      <div class="col-sm">
+      
+        <app-item *ngFor="let item of data" [title]="item.title" [description]="item.description" [image]="item.image" ></app-item>
+      </div>
+    </div>
+  
+    
+  </div>

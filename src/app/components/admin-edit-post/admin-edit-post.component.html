@@ -1,0 +1,19 @@
+
+    <form [formGroup]="dataForm" (ngSubmit)="Save()" style="width: 100% !important;">
+        <div class="form-group">
+          <label>Başlık*</label>
+          <input type="text" class="form-control" placeholder="Lütfen başlık yazınız" formControlName="title">
+        </div>
+
+        <div class="form-group">
+            <label>Görsel*</label>
+            <input type="text" class="form-control" placeholder="Lütfen görsel url'ini giriniz." formControlName="image">
+          </div>
+       
+        <div class="form-group">
+          <label>Açıklama*</label>
+          <textarea class="form-control" rows="3" formControlName="description"></textarea>
+        </div>
+
+        <button [disabled]="!dataForm.valid" type="submit" class="btn btn-primary">Kaydet</button>
+      </form>

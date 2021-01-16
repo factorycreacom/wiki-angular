@@ -1,0 +1,9 @@
+<app-admin-header></app-admin-header>
+
+<div class="container md-20">
+    <div class="row">
+        <app-admin-add-post style="width: 100% !important;" *ngIf="adminService.currentPage=='add'"></app-admin-add-post>
+        <app-admin-edit-post style="width: 100% !important" *ngIf="adminService.currentPage=='edit'" [defaultData]="editData"></app-admin-edit-post>
+        <app-admin-dash-table style="width: 100% !important;" *ngIf="adminService.currentPage=='dashboard'" (action)="Updater($event)"></app-admin-dash-table>
+    </div>
+</div>

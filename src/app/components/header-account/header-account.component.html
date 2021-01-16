@@ -1,0 +1,21 @@
+<div *ngIf="!auth.isLoggedIn">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/register']" >Kayıt Ol</a>       
+         </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/login']" >Giriş Yap</a>
+        </li>
+    </ul>
+</div>
+
+<div *ngIf="auth.isLoggedIn">
+    <ul  class="navbar-nav mr-auto">
+        <li class="navitem">
+            <span class="user-text"><b>Hoş geldiniz</b> {{auth.user?.email}}</span>
+        </li>
+        <li class="nav-item" style="margin-left: 20px !important;" (click)="Logout()">
+            <span class="user-text">Çıkış</span>       
+         </li>
+    </ul>
+</div>

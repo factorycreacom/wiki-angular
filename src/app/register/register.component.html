@@ -1,0 +1,32 @@
+<div class="wrapper fadeInDown">
+
+    <div class="errors" *ngIf="error">
+        {{error}}
+    </div>
+
+    <div id="formContent">
+        <!-- Tabs Titles -->
+    
+        <!-- Text -->
+        <div class="fadeIn first">
+              Lütfen Üye olunuz
+        </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="Register()">
+            <input type="email" id="login" class="fadeIn second" name="login" placeholder="E-Posta" formControlName="email" >
+            <input type="password" id="password" class="fadeIn third" name="login" placeholder="Şifre" formControlName="password">
+            <input type="submit" [disabled]="!loginForm.valid" class="fadeIn fourth" value="Kayıt Ol">
+        </form>
+
+        <div class="errors" *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)">
+            <span *ngIf="loginForm.controls['email'].errors.required">Lütfen E-Mail alanını boş bırakmayınız!</span>
+            <span *ngIf="loginForm.controls['email'].errors.email">Lütfen geçerli bir E-mail adresi giriniz.</span>
+        </div>
+        
+        <div id="formFooter">
+            <a class="underlineHover" [routerLink]="['/login']">Hesabınız var mı?</a>
+        </div>
+
+        
+    </div>
+</div>
